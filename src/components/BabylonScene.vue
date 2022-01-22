@@ -1,18 +1,19 @@
 <template>
   <div>
-    <h3>Suriya</h3>
+    <h3>Standard Materials</h3>
     <canvas></canvas>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { BasicScene } from "@/BabylonScene/BasicScene";
+// import { StandardMaterials } from "@/BabylonScene/StandardMaterials";
+import { PBR } from "@/BabylonScene/PBR";
 export default defineComponent({
   name: 'BabylonScene',
   mounted(){
     const canvas = document.querySelector("canvas")!;
-    new BasicScene(canvas);
+    new PBR(canvas);
     }
 });
 </script>
